@@ -24,10 +24,12 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @tags = Tag.all
   end
 
   def update
-  	if @post.update post_params
+  	@post.update(post_params)
+    if @post.save
   		redirect_to post_path(@post), notice: "Post Updated Successfully"
   	else
   		render :edit
