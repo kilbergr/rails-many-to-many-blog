@@ -2,11 +2,3 @@
 <%= render "error" %>
 <%= render partial: "form", locals:{instance:"Add Post"}%>
 
-<div class="form-group">
-	    <%= f.collection_check_boxes(:tag_ids, @tags, :id, :name) do |b| %>
-	        <span>
-	            <%= b.check_box %>
-	            <%= b.label %>
-	        </span>
-	    <% end %>
-	  </div>

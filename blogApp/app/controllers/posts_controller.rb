@@ -3,17 +3,18 @@ class PostsController < ApplicationController
 	before_action :find_post, only:[:show, :edit, :update, :destroy]
   
   def index
-    @posts = Post.all
   end
 
   def new
   	@post = Post.new
+    @tags = Tag.all
   end
 
   def create
   	@post = @author.post.new(post_params)
   	if @post.save
   		flash[:success]="Post Saved Successfully"
+      redirect_to posts_path
   	else
   		render :new
   	end

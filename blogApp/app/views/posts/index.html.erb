@@ -1,5 +1,8 @@
-
-<% @posts.each do |post| %>
-<h1>Posts by <%= post.author.name %></h1>
+<h1>Posts by <%= @author.name %></h1>
+<% @author.posts.each do |post| %>
+<div>
 <%= link_to "Read #{post.name}", post_path(post) %>
+</div>
 <% end %>
+
+<%= link_to "Make New Post", new_author_post_path(@author), class: "btn btn-info" %>

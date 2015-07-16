@@ -1,6 +1,10 @@
 <h1>Authors</h1>
 <% @authors.each do |author| %>
-<%= image_tag(author.image, height: '100') %>
-<%= link_to "#{author.name}'s Posts", author_path(author), class: "btn btn-default" %>
+
+	<div class="col-sm-5 col-md-4">
+		<%= image_tag(author.image, height: '100') %>
+		<%= link_to "#{author.name}'s Posts", author_path(author), class: "btn btn-info" %>
+	</div>
+
 
 <% end %>
