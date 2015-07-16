@@ -5,7 +5,7 @@
         resources :posts, shallow: true 
       end
 
-      resources :tags
+
 
 #                Prefix Verb   URI Pattern                             Controller#Action
 #    author_posts GET    /authors/:author_id/posts(.:format)     posts#index
@@ -24,13 +24,6 @@
 #                 PATCH  /authors/:id(.:format)                  authors#update
 #                 PUT    /authors/:id(.:format)                  authors#update
 #                 DELETE /authors/:id(.:format)                  authors#destroy
-#            tags GET    /tags(.:format)                         tags#index
-#                 POST   /tags(.:format)                         tags#create
-#         new_tag GET    /tags/new(.:format)                     tags#new
-#        edit_tag GET    /tags/:id/edit(.:format)                tags#edit
-#             tag GET    /tags/:id(.:format)                     tags#show
-#                 PATCH  /tags/:id(.:format)                     tags#update
-#                 PUT    /tags/:id(.:format)                     tags#update
-#                 DELETE /tags/:id(.:format)                     tags#destroy
+# 
   
 end

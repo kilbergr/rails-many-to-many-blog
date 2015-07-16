@@ -1,2 +1,5 @@
-<h1>Authors#show</h1>
-<p>Find me in app/views/authors/show.html.erb</p>
+<h1><%= @author.name %></h1>
+<%= image_tag(@author.image, height:200) %>
+<%= link_to "Posts by #{@author.name}", author_posts_path(@author), class: "btn btn-info" %>
+<%= link_to "Edit Author Information", edit_author_path(@author), class: "btn btn-default" %>
+<%= link_to "Delete Post", @author, method: :delete, data:{confirm: "Are you sure you want to delete this author?"}, class: "btn btn-danger"%>
