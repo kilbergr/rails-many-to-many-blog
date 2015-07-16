@@ -1,6 +1,6 @@
     Rails.application.routes.draw do
 
-    # root 'authors#index'
+     root 'authors#welcome'
       resources :authors do
         resources :posts, shallow: true 
       end

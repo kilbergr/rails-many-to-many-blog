@@ -1,2 +1,4 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<h1>Posts by <%= post.author %></h1>
+<% @posts.each do |post| %>
+<%= link_to "Read #{post.name}", new_author_post_path(post) %>
+<% end %>

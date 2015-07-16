@@ -1,0 +1,6 @@
+<%if @author.errors.any? %>
+	<% @author.errors.full_messages.each do |err|%>
+		<p class="alert-danger"><%= err %></p>
+
+	<% end %>
+<%end %>
